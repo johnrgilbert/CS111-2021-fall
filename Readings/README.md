@@ -1,0 +1,1 @@
+This directory contains materials that will be assigned or recommended for reading during the course. This includes several sections of Cleve Moler's "Numerical Computing with Matlab", or NCM. Other readings will be posted here during the quarter when they're needed.

@@ -14,11 +14,12 @@
 # Ignore subdirectories not to be archived on GitHub
 2020
 /2020/
+laplacians
+/laplacians/
 /Assessment/
 /Exams/
 /Grades/
 /Images/
 /OrganizationAndSyllabus/
-/RemoteTeaching/
 /SectionMaterials/
 /TAs/
