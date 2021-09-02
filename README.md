@@ -9,6 +9,6 @@ This repository will be updated throughout the quarter with course materials. Yo
 - [**Readings**](Readings/): This directory contains materials that will be assigned or recommended for reading during the course. This includes several sections of Cleve Moler's "Numerical Computing with Matlab", or NCM. Other readings will be posted here during the quarter when they're needed.
 - [**LectureMaterials**](LectureMaterials/): This directory contains the materials I use or generate in each lecture, including Jupyter transcripts and slides. It also includes ipad/whiteboard images from the Fall 2020 online CS 111 class. It doesn't include any recorded videos, which are too big for this site; to find those, go to GauchoSpace.
 - [**Homework**](Homework/): This directory contains all the homework assignments, including LaTeX source, and any auxiliary files needed for assignments.
-- [**Data**](Data/): This directory will contain any data we need for assignments or use in lectures.
+- [**Data**](Data/): This directory will contain any data we need for assignments or lectures.
 - [**Python**](Python/): This directory contains the custom Python software we will use for the class. See the README.md in the directory for instructions on setting it up for your own use.
 

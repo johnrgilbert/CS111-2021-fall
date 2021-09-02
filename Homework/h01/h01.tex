@@ -1,0 +1,117 @@
+\documentclass[11pt]{article} 
+
+\usepackage{amssymb,amsmath}
+
+\newcommand{\numpy}{{\tt numpy}}            % tt font for numpy
+\newcommand{\scipy}{{\tt scipy}}            % tt font for scipy
+\newcommand{\matplotlib}{{\tt matplotlib}}  % tt font for matplotlib
+
+\topmargin -1in
+\textheight 9in
+% \oddsidemargin  -.25in
+% \evensidemargin -.20in
+% \textwidth 7in
+
+% \topmargin -.5in
+% \textheight 7.5in
+\oddsidemargin  -0.25in
+\evensidemargin -0.20in
+\textwidth 7in
+
+\begin{document}
+
+$$\mbox{\Large \bf CS 111: Homework 1: Due by 11:59 pm Sunday, October 3, 2021}$$
+\par\smallskip\noindent
+{\bf Submit your paper as one PDF file,
+and tell GradeScope which page(s) each problem is on.}
+
+\par\medskip\noindent
+{\bf You will get full credit for this homework just by handing it in.}
+The purpose of this homework is to review some of the math background
+for the class, and to help you decide if there is anything you want to 
+brush up on.  The t.a.s will answer questions about the quiz in discussion 
+section on October 6.
+
+
+\begin{enumerate}
+
+\item
+Let
+$$ A = \left(
+\begin{array}{ccc}
+3 & -1 & 2 \\ 	
+0 & 1 & 2 \\ 
+1 & 0 & -1 \\
+\end{array} 
+\right). $$
+What is $A^T$?  What is $A^2$?  What is $A^TA$?
+(Do these computations both by hand and with \numpy.)
+
+\item
+The notation $||x||_2$ means the Euclidean norm (also called the 2-norm,
+or just the length) of the vector $x$.  
+What is $||(3, 1, 4, 1, 5)^T||_2$?
+
+\item
+Consider the following system of three equations in three unknowns.
+\begin{eqnarray}
+ 2x_0 - 3x_1 + x_2  & =  & 1 \\
+ 2x_1 + 3x_2  & =  & 7 \\
+ x_0 + x_2  & = & 4 
+\end{eqnarray}
+First write this system in the form $Ax=b$, 
+where $A$ is a matrix and $x$ and $b$ are vectors. 
+Second, write two lines of \numpy\ code that use {\tt np.array()} to
+create $A$ and $b$ as \numpy\ arrays.
+
+\item
+What vector $x$ solves the system above? 
+
+\item
+Write down a 2-by-2 matrix $A$ and a 2-vector $b$ such that $Ax=b$ has no 
+solution.  Explain in a sentence why there are no solutions.
+
+\item
+Write down a 2-by-2 matrix $A$ and a 2-vector $b$ such that $Ax=b$ has 
+more than one solution.  Give two different solutions.
+
+\item
+Is there a 2-by-2 matrix $A$ and a 2-vector $b$ such that $Ax=b$ has
+exactly two solutions?  Why or why not?
+
+\item
+Recall that a number $\lambda$ is an {\em eigenvalue} 
+of a matrix $A$ if there is some vector $x$ 
+(an {\em eigenvector}) for which $Ax = \lambda x$.
+Give an eigenvalue of the following matrix, and a corresponding eigenvector.
+$$ A = \left(
+\begin{array}{cc}
+4 & -1 \\ 	
+-1 & 4 \\
+\end{array} 
+\right). $$
+
+\item
+If $f(x)=7x^3-2x^2+4x-5$, what is $f'(x)$, the derivative of $f(x)$?
+
+\item
+If $z = xe^{y/2}$, what is $\partial z / \partial x$?
+What is $\partial z / \partial y$?
+
+\item
+If $f'(x) = x^2 + \sin x$, what is $f(x)$?
+
+\item
+The height in feet of a bullet fired straight up is
+given by $h=1280t-16t^2$, where $t$ is in seconds.
+What is the maximum height the bullet will reach? 
+When will it hit the ground?
+
+\item
+Suppose $y$ is a function of $x$ that satisfies
+$dy/dx = xy$, and also suppose $y=1$ when $x=0$.
+Write $y$ as a function of $x$.
+
+\end{enumerate}
+
+\end{document}
