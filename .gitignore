@@ -12,6 +12,7 @@
 .DS_Store
 
 # Ignore subdirectories not to be archived on GitHub
+2020
 /2020/
 /Assessment/
 /Exams/
