@@ -1,0 +1,23 @@
+# Ignore Emacs, Vim, and Jupyter backup files
+*~
+\#*
+*.swp
+.ipynb_checkpoints/
+
+# Ignore LaTeX work files
+*.aux
+*.log
+
+# Ignore MacOS directory display format files 
+.DS_Store
+
+# Ignore subdirectories not to be archived on GitHub
+/2020/
+/Assessment/
+/Exams/
+/Grades/
+/Images/
+/OrganizationAndSyllabus/
+/RemoteTeaching/
+/SectionMaterials/
+/TAs/
