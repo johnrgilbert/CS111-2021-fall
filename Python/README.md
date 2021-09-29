@@ -37,7 +37,7 @@ This gets you a local copy of all the lecture materials, reading materials,
 homework, syllabus, and so forth as well as the **cs111** Python module.
 
 Any time you want to make sure your copy is up to date,
-you can just navigate to the **CS111-2021-Fall/** directory
+you can just navigate to your **CS111-2021-Fall/** directory
 and say **git pull**. 
 
 ### Download Anaconda 3
@@ -62,6 +62,6 @@ on your computer and say **jupyter notebook**.
 That will open a page in your web browser pointing to your current 
 directory, and from there you can start individual notebook files.
 The first time, you might want to copy into that directory the file 
-**cs111-2021-fall/Python/Scratch.ipynb**, which is a notebook with all
+**CS111-2021-fall/Python/Scratch.ipynb**, which is a notebook with all
 the standard imports for CS111.
 You can run the notebook files from lecture the same way.
