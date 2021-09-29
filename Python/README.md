@@ -11,7 +11,7 @@ That's the way I do it myself. The TAs will demo the setup process
 in the first section, on Wednesday, September 29.
 
 We will use a handful of demo routines in Python that live in a
-module called "cs111". You'll need to be able to import them too.
+module called **cs111**. You'll need to be able to import them too.
 
 Previous versions of this course used [MATLAB](https://www.mathworks.com/products/matlab.html), which is a proprietary
 interactive numerical software package that’s widely used in
@@ -32,7 +32,7 @@ because you don't have to type passwords all the time, but do
 whatever works for you. In my old-fashioned way, I would just copy
 the string under SSH, then on my own laptop I would get a command
 line and navigate to wherever I wanted the **CS111-2021-Fall/**
-directory to be, and say **git clone <the-string>**.
+directory to be, and say **git clone the-string**.
 This gets you a local copy of all the lecture materials, reading materials,
 homework, syllabus, and so forth as well as the **cs111** Python module.
 
