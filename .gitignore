@@ -1,8 +1,9 @@
-# Ignore Emacs, Vim, and Jupyter backup files
+# Ignore Emacs, Vim, and Jupyter work files
 *~
 \#*
 *.swp
 .ipynb_checkpoints/
+__pycache__
 
 # Ignore LaTeX work files
 *.aux
