@@ -42,8 +42,8 @@ and say **git pull**.
 
 ### Download Anaconda 3
 
-All our software except the **cs111** module -- python, numpy, scipy, matplotlib -- is
-part of the free Anaconda distribution. 
+All our software -- python, numpy, scipy, matplotlib -- is
+part of the free Anaconda distribution, except for the **cs111** module.
 Go to the [Anaconda download page](https://www.anaconda.com/products/individual#Downloads), and download the individual edition for whatever OS your
 computer uses. (I use the MacOS version on my MacBook laptop, and I've
 also used the Linux version, and there's a version for Windows but I
