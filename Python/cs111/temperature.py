@@ -86,14 +86,14 @@ def make_A_small():
 # Make a right-hand side vector for the 2D Laplacian / temperature matrix   #
 #############################################################################
 
-def make_b(k, top = 0, bottom = 0, left = 0, right = 0):
+def make_b(k, top = 32, bottom = 32, left = 32, right = 32):
     """Create the right-hand side for the temperature problem on a k-by-k grid.
     Parameters: 
       k: number of grid points in each dimension.
-      top: list of k values for top boundary (optional, defaults to 0)
-      bottom: list of k values for bottom boundary (optional, defaults to 0)
-      left: list of k values for top boundary (optional, defaults to 0)
-      right: list of k values for top boundary (optional, defaults to 0)
+      top: list of k values for top boundary (optional, defaults to 32)
+      bottom: list of k values for bottom boundary (optional, defaults to 32)
+      left: list of k values for top boundary (optional, defaults to 32)
+      right: list of k values for top boundary (optional, defaults to 32)
     Outputs:
       b: the k**2 element vector (as a numpy array) for the rhs of the Poisson equation with given boundary conditions
     """
@@ -127,12 +127,12 @@ def make_b_small():
 # Make one wall with a radiator                                             #
 #############################################################################
 
-def radiator(k, width = .3, temperature = 100.):
+def radiator(k, width = .3, temperature = 212.):
     """Create one wall with a radiator
     Parameters: 
       k: number of grid points in each dimension; length of the wall
       width: width of the radiator as a fraction of length of the wall 
-      temperature: temperature of the radiator 
+      temperature: temperature of the radiator (default 212)
     Outputs:
       wall: the k element vector (as a numpy array) for the boundary conditions at the wall
     """
