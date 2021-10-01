@@ -127,7 +127,7 @@ def make_b_small():
 # Make one wall with a radiator                                             #
 #############################################################################
 
-def radiator(k, width = .3, rad_temp = 212., wall_temp = 32.);
+def radiator(k, width = .3, rad_temp = 212., wall_temp = 32.):
     """Create one wall with a radiator
     Parameters: 
       k: number of grid points in each dimension; length of the wall
