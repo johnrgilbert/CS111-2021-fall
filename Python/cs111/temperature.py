@@ -127,19 +127,20 @@ def make_b_small():
 # Make one wall with a radiator                                             #
 #############################################################################
 
-def radiator(k, width = .3, temperature = 212.):
+def radiator(k, width = .3, rad_temp = 212., wall_temp = 32.);
     """Create one wall with a radiator
     Parameters: 
       k: number of grid points in each dimension; length of the wall
       width: width of the radiator as a fraction of length of the wall 
-      temperature: temperature of the radiator (default 212)
+      rad_temp:  temperature of the radiator (default 212)
+      wall_temp: temperature of the wall outside the radiator (default 32)
     Outputs:
       wall: the k element vector (as a numpy array) for the boundary conditions at the wall
     """
     rad_start = int(k * (0.5 - width/2))
     rad_end = int(k * (0.5 + width/2))
-    wall = np.zeros(k)
-    wall[rad_start : rad_end] = temperature
+    wall = wall_temp * np.ones(k)
+    wall[rad_start : rad_end] = rad_temp
     
     return wall
 # End of radiator
