@@ -166,7 +166,7 @@ def LUsolve(A, b, pivoting=True):
     L, U, p = LUfactor(A, pivoting=pivoting)
     
     # Forward and back substitution
-    y = Lsolve(L, b[p], unit_diag=True)
+    y = Lsolve(L, b[p])
     x = Usolve(U, y)
     
     # Residual norm
