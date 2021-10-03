@@ -1,0 +1,105 @@
+\documentclass[11pt]{article} 
+
+\usepackage{amssymb,amsmath}
+
+\newcommand{\numpy}{{\tt numpy}}            % tt font for numpy
+\newcommand{\scipy}{{\tt scipy}}            % tt font for scipy
+\newcommand{\matplotlib}{{\tt matplotlib}}  % tt font for matplotlib
+
+% \topmargin -1in
+% \textheight 9in
+% \oddsidemargin  -.25in
+% \evensidemargin -.20in
+% \textwidth 7in
+\topmargin -.5in
+\textheight 7.5in
+\oddsidemargin  -0.25in
+\evensidemargin -0.20in
+\textwidth 7in
+
+\begin{document}
+
+$$\mbox{\Large \bf CS 111: Homework 2: Due by 11:59 pm Sunday, October 10, 2021}$$
+\par\smallskip\noindent
+{\bf Submit your paper as one PDF file,
+and tell GradeScope which page(s) each problem is on.
+If you worked with a partner, you must each turn in your own 
+homework paper, and report the name and perm number of your partner.
+No groups of more than two allowed.
+}
+
+\par\bigskip
+{\bf 1.}
+Consider the code for the temperature problem in 
+the file {\tt cs111/temperature.py}, 
+especially the routines {\tt make\_A()} and {\tt make\_b()}
+that create the matrix $A$ and right-hand side $b$.
+Experiment with different ways of setting the boundary conditions,
+which are the parameters {\tt top}, {\tt bottom}, {\tt left}, and {\tt right} 
+to {\tt make\_b()}.
+Make a plot of the most interesting result that you get (in your opinion), 
+and explain how you got it. 
+If you want, you can also experiment with {\tt matplotlib} 
+to make a more interesting plot of your result. 
+(The CS 111 logo on the course web page was obtained this way in 2010; 
+maybe we can get a new logo this year!)
+
+\par\bigskip
+{\bf 2.}
+Again consider the routines {\tt make\_A()} and {\tt make\_b()}
+that create the matrix~$A$ and right-hand side~$b$ for the temperature problem.
+Let $k=100$.
+
+\par\medskip
+{\bf 2.1.}
+How many elements are there in $b$?
+
+\par\medskip
+{\bf 2.2.}
+Considering all possible choices for the temperatures on the boundary,
+what is the largest number of elements of $b$ that could possibly 
+be nonzero? 
+
+\par\medskip
+{\bf 2.3.}
+Explain why the rest of the elements of $b$ are zero, no matter
+what the boundary temperatures are.
+
+\par\bigskip
+{\bf 3.1.} Consider the permutation matrix 
+$$P =
+   \left(
+   \begin{array}{cccc}
+    0 & 1 & 0 & 0 \\ 	
+    0 & 0 & 0 & 1 \\ 	
+    0 & 0 & 1 & 0 \\ 	
+    1 & 0 & 0 & 0 \\ 	
+   \end{array} \right)
+$$
+Find a 4-permutation {\tt v = [ something ]}
+such that {\tt A[v,:] == P @ A} holds for
+{\em every}\, 4-by-4 matrix $A$.
+Test your answer by running a few lines of Python, 
+and turn in the result.
+
+\par\medskip
+{\bf 3.2.} For the same $P$, 
+find a 4-permutation {\tt w = [ something ]}
+such that, for {\em every}\, 4-by-4 matrix $A$, 
+we have {\tt A[:,w] == A @ P}. 
+Test your answer and turn in the result.
+
+\par\bigskip
+{\bf 4.}
+Write {\tt Usolve()}, analogous to {\tt Lsolve()} in 
+the file {\tt cs111/LU.py},
+to solve an upper triangular system $Ux=y$. 
+Warning: Notice that, unlike in {\tt Lsolve()}, 
+the diagonal elements of $U$ don't have to be equal to one.
+Test your answer, both by itself and with {\tt LUsolve()},
+and turn in the result.
+Hint: Loops can be run backward in Python, 
+say from $n-1$ down to $0$, by writing
+$$\mbox{\tt for i in reversed(range(n)):}$$
+
+\end{document}
