@@ -1,0 +1,149 @@
+\documentclass[11pt]{article}
+
+\topmargin 0in
+\textheight 9in
+\oddsidemargin 0pt
+\evensidemargin 0pt
+\textwidth 6.5in
+
+\newcommand{\numpy}{{\tt numpy}}    % tt font for numpy
+
+\begin{document}
+
+$$\mbox{\Large \bf CS 111: Review Quiz: Answer key} $$
+
+\medskip
+
+
+\begin{enumerate}
+
+\item
+$$ 
+A^T = \left(
+\begin{array}{ccc}
+3 & 0 & 1 \\ 	
+-1 & 1 & 0 \\ 
+2 & 2 & -1 \\
+\end{array} 
+\right),
+A^2 = \left(
+\begin{array}{ccc}
+11 & -4 & 2 \\
+2 & 1 & 0 \\ 
+2 & -1 & 3 \\
+\end{array} 
+\right),
+A^TA = \left(
+\begin{array}{ccc}
+10 & -3 & 5 \\
+-3 & 2 & 0 \\
+5 & 0 & 9 \\
+\end{array} 
+\right).
+$$
+
+\item
+$||(3,1,4,1,5)^T||_2 = \sqrt{52} \approx 7.2111$
+
+\item
+$$
+\left(
+\begin{array}{ccc}
+2 & -3 & 1 \\
+0 & 2 & 3 \\ 
+1 & 0 & 1 \\
+\end{array} 
+\right) 
+\times
+\left(
+\begin{array}{c}
+ x_0 \\
+ x_1 \\ 
+ x_2 \\
+\end{array} 
+\right) 
+=
+\left(
+\begin{array}{c}
+ 1 \\
+ 7 \\ 
+ 4 \\
+\end{array} 
+\right) 
+$$
+In \numpy, {\tt A = np.array([[2, -3, 1], [0, 2, 3], [1, 0, 1]])}
+and {\tt b = np.array([1, 7, 4])}.
+The 1-dimensional {\tt numpy} array $b$ can represent either a
+column vector or a row vector; Python's matrix-vector multiplication
+operator {\tt @} will do the right thing.
+
+\item
+$$x = 
+\left(
+\begin{array}{c}
+ 3 \\
+ 2 \\ 
+ 1 \\
+\end{array} 
+\right) 
+$$
+
+\item
+There are many answers to this.  Here's one:
+Let {\tt A = np.array([[1, 2], [2, 4]])} 
+and {\tt b = np.array([3, 3])}.
+(In math notation we write $b=(3,3)^T$, 
+which is a column vector because of the transpose.)
+Explanation 1 (column view): 
+Matrix $A$ is singular, so the space spanned
+by its columns is only one-dimensional, and it consists of
+multiples of the vector $(1,2)^T$, which do not include $b$.
+Explanation 2 (row view):
+The two lines described by the rows of $Ax=b$ are parallel
+and hence do not intersect.
+Explanation 3 (brute force view):
+No matter what $x$ is, the second entry of $Ax$ will be equal
+to twice the first entry of $Ax$, which rules out $b$.
+
+\item
+There are many answers to this.  Here's one:
+Take $A$ to be the same matrix as in the previous problem,
+and $b = (3,6)^T$.
+Two solutions are $x = (1,1)^T$ and $x = (3,0)^T$.
+
+\item
+No, it's not possible to have exactly two solutions to $Ax=b$.
+If $x$ and $y$ are two different solutions, then there are
+infinitely many solutions: $x + \alpha(y-x)$ is a solution
+for every $\alpha$.
+
+\item
+$A$ has two eigenvalues, $3$ and $5$.
+Any multiple of $(1,1)^T$ is an eigenvector corresponding to $3$,
+and any multiple of $(1,-1)^T$ is an eigenvector corresponding to $5$.
+
+\item
+$f'(x)=21x^2-4x+4$.
+
+\item
+$\partial z / \partial x = e^{y/2}$, and
+$\partial z / \partial y = (x/2)e^{y/2}$.
+
+\item
+$f(x) = x^3/3 - \cos x + c$ for some constant $c$ (any constant will do).
+
+\item
+The height is maximum when the derivative $dh/dt$ is zero.
+$dh/dt = 1280-32t$, which is zero when $t = 40$, 
+at which time the height is $h = 25600$ feet.
+The bullet hits the ground when $h=0$,
+which means $1280t = 16t^2$, which means $t=1280/16 = 80$ seconds after
+firing.
+(The other solution to $h=0$ is of course $t=0$.)
+
+\item
+$y=e^{x^2/2}$.  
+
+\end{enumerate}
+
+\end{document}
