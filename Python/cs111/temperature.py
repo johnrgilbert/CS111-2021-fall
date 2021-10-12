@@ -63,9 +63,8 @@ def make_A_3D(k):
     Outputs:
       A: the sparse k**3-by-k**3 matrix representing the finite difference approximation to Poisson's equation.
     """
-    # Withheld for now
+    raise NotImplemented 
 
-    return None
 # end of make_A_3D
 
 
