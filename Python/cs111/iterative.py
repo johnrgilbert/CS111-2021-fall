@@ -26,6 +26,9 @@ def Jsolve(A, b, tol = 1e-8, max_iters = 1000, callback = None):
     bn, = b.shape
     assert bn == n, "rhs vector must be same size as matrix"
 
+    # Make the matrix use the sparse csr data structure
+    A = scipy.sparse.csr_matrix(A)
+
     # Split A into diagonal D plus off-diagonal C
     d = A.diagonal()         # diagonal elements of A as a vector
     # D = np.diag(d)           # diagonal of A as a matrix -- DON'T DO THIS, IT CREATES A HUGE DENSE ARRAY.
