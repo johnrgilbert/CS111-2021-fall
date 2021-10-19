@@ -24,7 +24,7 @@ There are no midterm or final exams in the course.
 
 There will be a homework assignment every week, assigned on Monday and due Sunday before midnight.
 
-You may work on the homework by yourself, or you may work with exactly one other person. (It's optional to work with another person.) If you work with another person, you must each turn in your own homework paper, and you must both put the name of the person you worked with on your paper. You may not discuss the homework with anyone except your (optional) partner. You may change partners between homework assignments, but you may only have one partner on any single homework assignment.
+You may work on the homework by yourself, or you may work with exactly one other person. (It's optional to work with another person.) Even if you work with another person, _you must write up the homework separately_, and each turn in your own individual LaTeX writeup of the homework.  You must also put the name of the person you worked with on your paper.  You may not discuss the homework with anyone except your (optional) partner.  You may change partners between homework assignments, but you may only have one partner on any single homework assignment.
 
 Homework is due on Sundays no later than 11:59pm. You must turn in your homework online, in GradeScope, as a single PDF file. When you turn in your PDF, you must tell GradeScope which pages of your document contain each individual homework problem.
 
@@ -36,7 +36,7 @@ When a homework problem requires writing some Python code, you should turn in al
 
 - A listing of the Python code you wrote (can be in a screenshot from Jupyter).
 
-- Your output from testing and running your Python code (can be in a screenshot from Jupyter).
+- Your output from testing and running your Python code (can be in a screenshot from Jupyter). _Always turn in testing output that demonstrates that your code works correctly._
 
 - Any figures or plots you produced (can be in a screenshot from Jupyter).
 
