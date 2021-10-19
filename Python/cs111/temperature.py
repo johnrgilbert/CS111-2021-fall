@@ -63,39 +63,7 @@ def make_A_3D(k):
     Outputs:
       A: the sparse k**3-by-k**3 matrix representing the finite difference approximation to Poisson's equation.
     """
-    # First make a list with one triple (row, column, value) for each nonzero element of A
-    triples = []
-    for x in range(k):
-        for y in range(k):
-            for z in range(k):
-                # what row of the matrix is grid point (i,j)?
-                row = z + y*k + x*k*k
-                # the diagonal element in this row
-                triples.append((row, row, 6.0))
-                # connect to grid neighbors in x dimension
-                if x > 0:
-                    triples.append((row, row - k*k, -1.0))
-                if x < k - 1:
-                    triples.append((row, row + k*k, -1.0))
-                # connect to grid neighbors in y dimension
-                if y > 0:
-                    triples.append((row, row - k, -1.0))
-                if y < k - 1:
-                    triples.append((row, row + k, -1.0))
-                # connect to grid neighbors in z dimension
-                if z > 0:
-                    triples.append((row, row - 1, -1.0))
-                if z < k - 1:
-                    triples.append((row, row + 1, -1.0))
-
-    # Finally convert the list of triples to a scipy sparse matrix
-    ndim = k*k*k
-    rownum = [t[0] for t in triples]
-    colnum = [t[1] for t in triples]
-    values = [t[2] for t in triples]
-    A = scipy.sparse.csr_matrix((values, (rownum, colnum)), shape = (ndim, ndim))
-    
-    return A 
+    raise NotImplementedError
 # end of make_A_3D
 
 
