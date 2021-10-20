@@ -97,7 +97,7 @@ from {\tt x = cs111.LUsolve(A,b)} to the solution you get by saying
 \begin{verbatim}
     R = Cfactor(A)
     y = cs111.Lsolve(R.T, b)
-    x = cs111.Usolve(R, b)
+    x = cs111.Usolve(R, y)
 \end{verbatim}
 Finally, do an experiment to compare the running time of your {\tt Cfactor(A)}
 with that of {\tt LUfactorNoPiv(A)}, for a range of values of $n$ up to large
