@@ -28,7 +28,9 @@ from cs111.floatingpoint import double_to_hex
 from cs111.floatingpoint import print_float64
 from cs111.floatingpoint import bits
 
-from cs111.pagerank import pagerank1
+from cs111.gistemp import get_gistemp
 
 from cs111.ode import ode1
 from cs111.ode import ode2
+
+from cs111.pagerank import pagerank1
