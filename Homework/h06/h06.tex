@@ -72,15 +72,16 @@ $$\sum_i (f(y_i) - t_i)^2$$
 as small as possible.
 
 Let's say that in terms of matrices and vectors.
-Let $t$ be the column vector $(t_0,\ldots,t_{136})$ of measured temperatures,
+Let $t$ be the column vector $(t_0,\ldots,t_{136})^T$ of measured temperatures,
 one per year.
-Let $A$ be a matrix with two columns, and with one row for each year.
-In row $i$ of $A$, the first entry is a 1 and the second entry is the year $y_i$.
+Let $A$ be a matrix with two columns, with one row for each year.
+In row~$i$ of~$A$, the first entry is a~1 and the second entry is the year~$y_i$.
 Then if $x=(x_0,x_1)^T$ is the 2-vector of unknowns, 
-the product $Ax$ is the vector of the 137 values $f(y_i)$, which we want to be 
-as close to $t$ as possible.
-Thus the problem we need to solve is to find the 2-vector $x$ that minimizes
-$$\min_x ||Ax - t||.$$
+the product~$Ax$ is the vector of the 137~values~$f(y_i)$, which we want to be 
+as close to~$t$ as possible.
+Thus the problem we need to solve is to find the vector $x$ that minimizes
+the 2-norm of the residual,
+$$\min_x ||Ax - t||_2.$$
 This is exactly the problem that {\tt npla.lstsq(A, t, rcond = None)} solves. 
 (The {\tt rcond = None} just suppresses a warning message about different versions
 of the routine.)
