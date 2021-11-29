@@ -30,6 +30,9 @@ from cs111.floatingpoint import bits
 
 from cs111.gistemp import get_gistemp
 
+from cs111.minimize import gradient_descent
+from cs111.minimize import gradient_momentum
+
 from cs111.ode import ode1
 from cs111.ode import ode2
 
