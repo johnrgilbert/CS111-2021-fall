@@ -50,7 +50,6 @@ def gradient_descent(func, x0, history=True, tol=1e-4, rate=.01, max_iters=1000,
     for k in range(1, max_iters+1):
         fvalue, gradient = func(xk)
         delta_x = rate * (-gradient)
-        # print(f"k:{k}, xk:{xk}, gradient:{gradient}, delta_x:{delta_x}\n")
         xk = xk + delta_x
                 
         # Call user function if specified
@@ -123,13 +122,15 @@ def gradient_momentum(func, x0, history=True, tol=1e-4, rate=.01, beta=0, max_it
         costs = [func(x0)[0]]
 
     # Iterate
-    previous_gradient = 0
+    previous_direction = 0
     for k in range(1, max_iters+1):
         fvalue, gradient = func(xk)
-        delta_x = - rate * (gradient + beta*previous_gradient)
-        # print(f"k:{k}, xk:{xk}, gradient:{gradient}, delta_x:{delta_x}\n")
+        direction = - gradient + beta * previous_direction
+        previous_direction = direction
+        # delta_x = - rate * (gradient + beta*previous_gradient)
+        delta_x = rate * direction
         xk = xk + delta_x
-        previous_gradient = gradient
+        # previous_gradient = gradient
                 
         # Call user function if specified
         if callback is not None:
