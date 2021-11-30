@@ -19,6 +19,7 @@ def int64_to_hex(f):
     while len(s) < 16:  # pad with 0 or F depending on sign
         s = pad + s
     return s
+#end of int64_to_hex
 
 def double_to_hex(f):
     s = hex(struct.unpack('<Q', struct.pack('<d', f))[0])
@@ -26,7 +27,7 @@ def double_to_hex(f):
     while len(s) < 16:  # pad with zeros
         s = '0' + s
     return s
-#end of int64_to_hex
+#end of double_to_hex
 
 def print_float64(x):
     """Print a 64-bit floating-point number in various formats.
