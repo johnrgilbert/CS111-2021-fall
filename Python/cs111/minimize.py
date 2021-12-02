@@ -127,10 +127,8 @@ def gradient_momentum(func, x0, history=True, tol=1e-4, rate=.01, beta=0, max_it
         fvalue, gradient = func(xk)
         direction = - gradient + beta * previous_direction
         previous_direction = direction
-        # delta_x = - rate * (gradient + beta*previous_gradient)
         delta_x = rate * direction
         xk = xk + delta_x
-        # previous_gradient = gradient
                 
         # Call user function if specified
         if callback is not None:
